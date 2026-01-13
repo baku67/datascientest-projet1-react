@@ -1,0 +1,26 @@
+.trust-section {
+  margin: 40px auto;
+
+  h2 {
+    text-align: center;
+  }
+
+  .trust-logos {
+    list-style-type: none;
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    li {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+
+      img {
+        width: 30px;
+      }
+    }
+  }
+}
