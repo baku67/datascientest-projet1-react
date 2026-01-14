@@ -124,115 +124,118 @@ function RegisterPage() {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
-    <>
+    <div className="page-nav-footer">
       <NavBar />
-      <section className="register-container">
-        <h1 className="register-title">{t("register_page_title")}</h1>
 
-        <Box component="form" onSubmit={handleSubmit(onSubmit)} noValidate>
-          <Stack spacing={2.2}>
-            <TextField
-              label={t("register_form_email_label")}
-              placeholder={t("register_form_email_placeholder")}
-              type="email"
-              fullWidth
-              {...register("email")}
-              error={!!errors.email}
-              helperText={errors.email?.message}
-              autoComplete="email"
-            />
+      <main className="page__content">
+        <section className="register-container">
+          <h1 className="register-title">{t("register_page_title")}</h1>
 
-            <TextField
-              label={t("register_form_password_label")}
-              placeholder={t("register_form_password_placeholder")}
-              type={showPassword ? "text" : "password"}
-              autoComplete="new-password"
-              fullWidth
-              {...register("password")}
-              error={!!errors.password}
-              helperText={errors.password?.message}
-              InputProps={{
-                endAdornment: (
-                  <InputAdornment position="end">
-                    <IconButton
-                      onClick={() => setShowPassword((v) => !v)}
-                      edge="end"
-                      aria-label={
-                        showPassword
-                          ? t("hide_password", {
-                              defaultValue: "Masquer le mot de passe",
-                            })
-                          : t("show_password", {
-                              defaultValue: "Afficher le mot de passe",
-                            })
-                      }
-                    >
-                      {showPassword ? <VisibilityOff /> : <Visibility />}
-                    </IconButton>
-                  </InputAdornment>
-                ),
-              }}
-            />
+          <Box component="form" onSubmit={handleSubmit(onSubmit)} noValidate>
+            <Stack spacing={2.2}>
+              <TextField
+                label={t("register_form_email_label")}
+                placeholder={t("register_form_email_placeholder")}
+                type="email"
+                fullWidth
+                {...register("email")}
+                error={!!errors.email}
+                helperText={errors.email?.message}
+                autoComplete="email"
+              />
 
-            <TextField
-              label={t("register_form_repeat_password_label")}
-              placeholder={t("register_form_repeat_password_placeholder")}
-              type={showPassword ? "text" : "password"}
-              autoComplete="new-password"
-              fullWidth
-              {...register("repeatPassword")}
-              error={!!errors.repeatPassword}
-              helperText={errors.repeatPassword?.message}
-              InputProps={{
-                endAdornment: (
-                  <InputAdornment position="end">
-                    <IconButton
-                      onClick={() => setShowPassword((v) => !v)}
-                      edge="end"
-                      aria-label={
-                        showPassword
-                          ? t("hide_password", {
-                              defaultValue: "Masquer le mot de passe",
-                            })
-                          : t("show_password", {
-                              defaultValue: "Afficher le mot de passe",
-                            })
-                      }
-                    >
-                      {showPassword ? <VisibilityOff /> : <Visibility />}
-                    </IconButton>
-                  </InputAdornment>
-                ),
-              }}
-            />
+              <TextField
+                label={t("register_form_password_label")}
+                placeholder={t("register_form_password_placeholder")}
+                type={showPassword ? "text" : "password"}
+                autoComplete="new-password"
+                fullWidth
+                {...register("password")}
+                error={!!errors.password}
+                helperText={errors.password?.message}
+                InputProps={{
+                  endAdornment: (
+                    <InputAdornment position="end">
+                      <IconButton
+                        onClick={() => setShowPassword((v) => !v)}
+                        edge="end"
+                        aria-label={
+                          showPassword
+                            ? t("hide_password", {
+                                defaultValue: "Masquer le mot de passe",
+                              })
+                            : t("show_password", {
+                                defaultValue: "Afficher le mot de passe",
+                              })
+                        }
+                      >
+                        {showPassword ? <VisibilityOff /> : <Visibility />}
+                      </IconButton>
+                    </InputAdornment>
+                  ),
+                }}
+              />
 
-            <Box sx={{ display: "flex", justifyContent: "center", pt: 1 }}>
-              <Button
-                type="submit"
-                variant="contained"
-                disabled={isSubmitting}
-                sx={{ minWidth: 140 }}
-              >
-                {t("register_form_submit_button")}
-              </Button>
-            </Box>
+              <TextField
+                label={t("register_form_repeat_password_label")}
+                placeholder={t("register_form_repeat_password_placeholder")}
+                type={showPassword ? "text" : "password"}
+                autoComplete="new-password"
+                fullWidth
+                {...register("repeatPassword")}
+                error={!!errors.repeatPassword}
+                helperText={errors.repeatPassword?.message}
+                InputProps={{
+                  endAdornment: (
+                    <InputAdornment position="end">
+                      <IconButton
+                        onClick={() => setShowPassword((v) => !v)}
+                        edge="end"
+                        aria-label={
+                          showPassword
+                            ? t("hide_password", {
+                                defaultValue: "Masquer le mot de passe",
+                              })
+                            : t("show_password", {
+                                defaultValue: "Afficher le mot de passe",
+                              })
+                        }
+                      >
+                        {showPassword ? <VisibilityOff /> : <Visibility />}
+                      </IconButton>
+                    </InputAdornment>
+                  ),
+                }}
+              />
 
-            <p className="go-to-register-text">
-              {t("already_registered_question")}
-              <NavLink
-                to="/login"
-                onClick={close}
-                className="register-links go-to-login-link"
-              >
-                {t("go_to_login")}
-              </NavLink>
-            </p>
-          </Stack>
-        </Box>
-      </section>
+              <Box sx={{ display: "flex", justifyContent: "center", pt: 1 }}>
+                <Button
+                  type="submit"
+                  variant="contained"
+                  disabled={isSubmitting}
+                  sx={{ minWidth: 140 }}
+                >
+                  {t("register_form_submit_button")}
+                </Button>
+              </Box>
+
+              <p className="go-to-register-text">
+                {t("already_registered_question")}
+                <NavLink
+                  to="/login"
+                  onClick={close}
+                  className="register-links go-to-login-link"
+                >
+                  {t("go_to_login")}
+                </NavLink>
+              </p>
+            </Stack>
+          </Box>
+        </section>
+      </main>
 
       <Footer />
-    </>
+    </div>
   );
 }
 

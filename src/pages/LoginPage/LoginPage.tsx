@@ -76,93 +76,95 @@ function LoginPage() {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
-    <>
+    <div className="page-nav-footer">
       <NavBar />
-      <section className="login-container">
-        <h1 className="login-title">{t("login_page_title")}</h1>
 
-        <Box component="form" onSubmit={handleSubmit(onSubmit)} noValidate>
-          <Stack spacing={2.2}>
-            <TextField
-              label={t("login_form_email_label")}
-              placeholder={t("login_form_email_placeholder")}
-              type="email"
-              fullWidth
-              {...register("email")}
-              error={!!errors.email}
-              helperText={errors.email?.message}
-              autoComplete="email"
-            />
+      <main className="page__content">
+        <section className="login-container">
+          <h1 className="login-title">{t("login_page_title")}</h1>
 
-            <TextField
-              label={t("login_form_password_label")}
-              placeholder={t("login_form_password_placeholder")}
-              type={showPassword ? "text" : "password"}
-              autoComplete="current-password"
-              fullWidth
-              {...register("password")}
-              error={!!errors.password}
-              helperText={errors.password?.message}
-              InputProps={{
-                endAdornment: (
-                  <InputAdornment position="end">
-                    <IconButton
-                      onClick={() => setShowPassword((v) => !v)}
-                      edge="end"
-                      aria-label={
-                        showPassword
-                          ? t("hide_password", {
-                              defaultValue: "Masquer le mot de passe",
-                            })
-                          : t("show_password", {
-                              defaultValue: "Afficher le mot de passe",
-                            })
-                      }
-                    >
-                      {showPassword ? <VisibilityOff /> : <Visibility />}
-                    </IconButton>
-                  </InputAdornment>
-                ),
-              }}
-            />
+          <Box component="form" onSubmit={handleSubmit(onSubmit)} noValidate>
+            <Stack spacing={2.2}>
+              <TextField
+                label={t("login_form_email_label")}
+                placeholder={t("login_form_email_placeholder")}
+                type="email"
+                fullWidth
+                {...register("email")}
+                error={!!errors.email}
+                helperText={errors.email?.message}
+                autoComplete="email"
+              />
 
-            <Box sx={{ display: "flex", justifyContent: "center", pt: 1 }}>
-              <Button
-                type="submit"
-                variant="contained"
-                disabled={isSubmitting}
-                sx={{ minWidth: 140 }}
-              >
-                {t("login_form_submit_button")}
-              </Button>
-            </Box>
+              <TextField
+                label={t("login_form_password_label")}
+                placeholder={t("login_form_password_placeholder")}
+                type={showPassword ? "text" : "password"}
+                autoComplete="current-password"
+                fullWidth
+                {...register("password")}
+                error={!!errors.password}
+                helperText={errors.password?.message}
+                InputProps={{
+                  endAdornment: (
+                    <InputAdornment position="end">
+                      <IconButton
+                        onClick={() => setShowPassword((v) => !v)}
+                        edge="end"
+                        aria-label={
+                          showPassword
+                            ? t("hide_password", {
+                                defaultValue: "Masquer le mot de passe",
+                              })
+                            : t("show_password", {
+                                defaultValue: "Afficher le mot de passe",
+                              })
+                        }
+                      >
+                        {showPassword ? <VisibilityOff /> : <Visibility />}
+                      </IconButton>
+                    </InputAdornment>
+                  ),
+                }}
+              />
 
-            <div className="login-footer-links">
-              <NavLink
-                to="/forgot-password"
-                onClick={close}
-                className="forgot-password-link login-links"
-              >
-                {t("forgot_password")}
-              </NavLink>
-
-              <p className="go-to-login-text">
-                {t("no_account_question")}
-                <NavLink
-                  to="/signup"
-                  onClick={close}
-                  className="go-to-register-link login-links"
+              <Box sx={{ display: "flex", justifyContent: "center", pt: 1 }}>
+                <Button
+                  type="submit"
+                  variant="contained"
+                  disabled={isSubmitting}
+                  sx={{ minWidth: 140 }}
                 >
-                  {t("register_create_one")}
-                </NavLink>
-              </p>
-            </div>
-          </Stack>
-        </Box>
-      </section>
+                  {t("login_form_submit_button")}
+                </Button>
+              </Box>
 
+              <div className="login-footer-links">
+                <NavLink
+                  to="/forgot-password"
+                  onClick={close}
+                  className="forgot-password-link login-links"
+                >
+                  {t("forgot_password")}
+                </NavLink>
+
+                <p className="go-to-login-text">
+                  {t("no_account_question")}
+                  <NavLink
+                    to="/signup"
+                    onClick={close}
+                    className="go-to-register-link login-links"
+                  >
+                    {t("register_create_one")}
+                  </NavLink>
+                </p>
+              </div>
+            </Stack>
+          </Box>
+        </section>
+      </main>
       <Footer />
-    </>
+    </div>
   );
 }
 
