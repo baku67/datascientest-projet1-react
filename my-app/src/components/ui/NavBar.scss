@@ -66,10 +66,18 @@
 }
 
 .nav-login {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  text-align: center;
   font-size: 12px;
-  font-weight: 700;
-  color: rgba(255, 255, 255, 0.75);
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.95);
   text-decoration: none;
+
+  padding: 14px 14px;
+  border-radius: 10px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
 
   &:hover {
     color: rgba(255, 255, 255, 0.92);
@@ -77,12 +85,15 @@
 }
 
 .nav-register {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  text-align: center;
   font-size: 12px;
   font-weight: 800;
   color: rgba(255, 255, 255, 0.95);
   text-decoration: none;
 
-  padding: 10px 14px;
+  padding: 14px 14px;
   border-radius: 10px;
 
   background: linear-gradient(135deg, #5b21b6, #7c3aed);
@@ -98,7 +109,7 @@
   }
 }
 
-/* Burger + menu mobile : ajout à la fin de ton fichier, sans toucher à tes styles existants */
+/* Burger + menu mobile */
 .nav-burger,
 .nav-mobile,
 .nav-overlay {
@@ -108,10 +119,12 @@
 .nav-burger {
   background: transparent;
   border: 0;
-  padding: 10px;
+  padding: 18px 10px;
   cursor: pointer;
-  border-radius: 12px;
+  border-radius: 8px;
   -webkit-tap-highlight-color: transparent;
+
+  background: var(--color-secondary);
 }
 
 .nav-burger-lines {
@@ -141,15 +154,13 @@
   }
 }
 
-/* Mobile only */
+/* Mobile */
 @media (max-width: 768px) {
-  /* On cache ce qui existe déjà en desktop */
   .nav-links,
   .nav-right {
     display: none;
   }
 
-  /* Titre gauche / burger droite */
   .nav-burger {
     display: inline-flex;
     align-items: center;
@@ -160,8 +171,18 @@
     position: relative;
   }
 
-  /* Panneau menu */
+  .nav-register,
+  .nav-login {
+    flex: 1;
+  }
+
+  .lang__menu {
+    left: 0;
+    right: auto;
+  }
+
   .nav-mobile {
+    background: var(--color-primary);
     display: block;
     position: absolute;
     left: 0;
@@ -174,9 +195,8 @@
     transform: translateY(-6px);
     transition: transform 160ms ease, opacity 160ms ease;
 
-    /* Look : adapte si besoin à ton design actuel */
     margin: 10px;
-    padding: 12px 14px;
+    padding: 20px 20px;
     border-radius: 16px;
   }
 
@@ -187,6 +207,7 @@
   }
 
   .nav-mobile-links {
+    list-style-type: none;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -194,13 +215,15 @@
   }
 
   .nav-mobile-auth {
-    display: flex;
-    flex-direction: column;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
     gap: 10px;
     padding-top: 12px;
   }
 
-  /* Overlay fermeture */
+  /* Overlay sombre arriere plan + fermeture "outer-click" */
   .nav-overlay {
     display: block;
     position: fixed;
@@ -210,7 +233,7 @@
     opacity: 0;
     pointer-events: none;
     transition: opacity 160ms ease;
-    background: rgba(0, 0, 0, 0.25);
+    background: rgba(0, 0, 0, 0.35);
     border: 0;
   }
 

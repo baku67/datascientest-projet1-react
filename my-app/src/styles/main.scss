@@ -4,8 +4,8 @@
 @import "@fontsource/roboto/700.css";
 
 :root {
-  --color-primary: #0f172a; // primaire Figma
-  --color-secondary: #9333ea;
+  --color-primary: #0f172a;
+  --color-secondary: #9333ea; // primaire Figma
 
   --bg: #0f172a;
   --text: #ffffff;
@@ -13,6 +13,8 @@
 
 body {
   margin: 0;
+
+  list-style-type: none !important;
 
   font-family: Roboto, system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
 

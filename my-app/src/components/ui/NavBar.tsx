@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import "./NavBar.scss";
+import LanguageSwitcher from "./ToggleLang/ToggleLang";
 
 export default function NavBar() {
   const { t } = useTranslation();
@@ -31,6 +32,8 @@ export default function NavBar() {
         </div>
 
         <div className="nav-right">
+          <LanguageSwitcher />
+
           <a className="nav-login" href="#" onClick={close}>
             {t("login")}
           </a>
@@ -39,7 +42,7 @@ export default function NavBar() {
           </a>
         </div>
 
-        {/* Burger (mobile uniquement via CSS) */}
+        {/* Burger */}
         <button
           className="nav-burger"
           type="button"
@@ -52,7 +55,7 @@ export default function NavBar() {
         </button>
       </nav>
 
-      {/* Menu mobile (ne change rien en desktop) */}
+      {/* Menu mobile */}
       <div id="mobile-menu" className={`nav-mobile ${isOpen ? "is-open" : ""}`}>
         <ul className="nav-mobile-links" role="list">
           <li>
@@ -64,6 +67,9 @@ export default function NavBar() {
             <a className="nav-link" href="#" onClick={close}>
               {t("contact")}
             </a>
+          </li>
+          <li>
+            <LanguageSwitcher />
           </li>
         </ul>
 

@@ -131,7 +131,7 @@ const resources = {
 } as const;
 
 i18n
-  .use(LanguageDetector) // optionnel mais pratique :contentReference[oaicite:1]{index=1}
+  .use(LanguageDetector)
   .use(initReactI18next)
   .init({
     resources,
