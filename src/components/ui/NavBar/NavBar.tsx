@@ -38,7 +38,7 @@ export default function NavBar() {
           <NavLink className="nav-login" to="/login" onClick={close}>
             {t("login")}
           </NavLink>
-          <NavLink className="nav-register" to="/register" onClick={close}>
+          <NavLink className="nav-register" to="/signup" onClick={close}>
             {t("signup")}
           </NavLink>
         </div>

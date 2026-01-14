@@ -87,11 +87,14 @@ const resources = {
       contact_form_name_placeholder: "Enter your name",
       contact_form_forname_label: "First Name",
       contact_form_forname_placeholder: "Enter your first name",
+      contact_form_error_phone_invalid: "Invalid phone number",
       contact_form_email_label: "Email",
       contact_form_email_placeholder: "Enter your email address",
       contact_form_message_label: "Message",
       contact_form_message_placeholder: "Write your message here",
       contact_form_submit_button: "Send Message",
+      contact_form_error_message_min: "Message too short",
+      contact_form_requis: "This field is required",
 
       // FOOTER
       footer_product: "Product",
@@ -209,11 +212,14 @@ const resources = {
       contact_form_name_placeholder: "Entrez votre nom",
       contact_form_forname_label: "Prénom",
       contact_form_forname_placeholder: "Entrez votre prénom",
+      contact_form_error_phone_invalid: "Téléphone invalide",
       contact_form_email_label: "Email",
       contact_form_email_placeholder: "Entrez votre adresse email",
       contact_form_message_label: "Message",
       contact_form_message_placeholder: "Écrivez votre message ici",
       contact_form_submit_button: "Envoyer le message",
+      contact_form_error_message_min: "Message trop court",
+      contact_form_requis: "Ce champ est requis",
 
       // FOOTER
       footer_product: "Produits",

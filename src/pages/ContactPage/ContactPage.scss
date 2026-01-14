@@ -1,4 +1,3 @@
-/* ContactPage.tsx : le <section> n'a pas de classe -> on le cible proprement */
 :root {
   --bg-0: #070d1a;
   --bg-1: #0b1226;
@@ -7,7 +6,6 @@
   --text-dim: rgba(234, 240, 255, 0.74);
 }
 
-/* Fond global proche de la maquette */
 body {
   background: radial-gradient(
     1200px 600px at 50% 26%,
@@ -18,12 +16,10 @@ body {
   color: var(--text);
 }
 
-/* Container page (si tu as déjà un #root, sinon laisse) */
 #root {
   min-height: 100vh;
 }
 
-/* Le bloc titre + description (le <section> juste après <NavBar />) */
 #root > section:first-of-type {
   width: min(980px, 92vw);
   margin: 0 auto;
@@ -31,7 +27,6 @@ body {
   text-align: center;
 }
 
-/* Titre */
 #root > section:first-of-type > h1 {
   margin: 0;
   font-weight: 800;
@@ -40,7 +35,6 @@ body {
   font-size: clamp(44px, 6.2vw, 64px);
 }
 
-/* Texte sous-titre */
 #root > section:first-of-type > p {
   margin: 14px auto 0;
   max-width: 760px;
@@ -49,8 +43,6 @@ body {
   line-height: 1.65;
 }
 
-/* Espace entre le header texte et la section formulaire (FormSection) */
 .contact-form {
-  /* pas du style du formulaire : juste un margin-top "layout" */
   margin-top: 14px;
 }

@@ -9,6 +9,7 @@ import { Box, Button, TextField, Paper, Stack } from "@mui/material";
 type ContactFormValues = {
   name: string;
   forname: string;
+  phone: string;
   email: string;
   message: string;
 };
@@ -32,6 +33,14 @@ function FormSection() {
             defaultValue: "Prénom trop court",
           })
         ),
+        phone: z
+          .string()
+          .trim()
+          .refine((v) => v === "" || /^[0-9+\s().-]{6,20}$/.test(v), {
+            message: t("contact_form_error_phone_invalid", {
+              defaultValue: "Téléphone invalide",
+            }),
+          }),
         email: z
           .string()
           .min(
@@ -45,12 +54,15 @@ function FormSection() {
               defaultValue: "Email invalide",
             })
           ),
-        message: z.string().min(
-          10,
-          t("contact_form_error_message_min", {
-            defaultValue: "Message trop court",
-          })
-        ),
+        message: z
+          .string()
+          .min(1, t("contact_form_requis"))
+          .min(
+            10,
+            t("contact_form_error_message_min", {
+              defaultValue: "Message trop court",
+            })
+          ),
       }),
     [t]
   );
@@ -62,7 +74,7 @@ function FormSection() {
     reset,
   } = useForm<ContactFormValues>({
     resolver: zodResolver(schema),
-    defaultValues: { name: "", forname: "", email: "", message: "" },
+    defaultValues: { name: "", forname: "", phone: "", email: "", message: "" },
     mode: "onTouched", // erreurs s'affichent au blur
   });
 
@@ -101,6 +113,7 @@ function FormSection() {
               <TextField
                 label={t("contact_form_name_label")}
                 placeholder={t("contact_form_name_placeholder")}
+                required
                 fullWidth
                 {...register("name")}
                 error={!!errors.name}
@@ -111,6 +124,7 @@ function FormSection() {
               <TextField
                 label={t("contact_form_forname_label")}
                 placeholder={t("contact_form_forname_placeholder")}
+                required
                 fullWidth
                 {...register("forname")}
                 error={!!errors.forname}
@@ -119,20 +133,37 @@ function FormSection() {
               />
             </Stack>
 
-            <TextField
-              label={t("contact_form_email_label")}
-              placeholder={t("contact_form_email_placeholder")}
-              type="email"
-              fullWidth
-              {...register("email")}
-              error={!!errors.email}
-              helperText={errors.email?.message}
-              autoComplete="email"
-            />
+            <Stack direction={{ xs: "column", sm: "row" }} spacing={2}>
+              <TextField
+                label={t("contact_form_phone_label", { defaultValue: "Tél" })}
+                placeholder={t("contact_form_phone_placeholder", {
+                  defaultValue: "+33 6 12 34 56 78",
+                })}
+                type="tel"
+                fullWidth
+                {...register("phone")}
+                error={!!errors.phone}
+                helperText={errors.phone?.message}
+                autoComplete="tel"
+              />
+
+              <TextField
+                label={t("contact_form_email_label")}
+                placeholder={t("contact_form_email_placeholder")}
+                type="email"
+                required
+                fullWidth
+                {...register("email")}
+                error={!!errors.email}
+                helperText={errors.email?.message}
+                autoComplete="email"
+              />
+            </Stack>
 
             <TextField
               label={t("contact_form_message_label")}
               placeholder={t("contact_form_message_placeholder")}
+              required
               fullWidth
               multiline
               minRows={4}
