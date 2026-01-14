@@ -49,8 +49,15 @@
   }
 }
 
+#trust-logos-2 {
+  margin-left: 24px;
+}
+
 /* Desktop : liste classiqu */
 @media (min-width: 769px) {
+  #trust-logos-2 {
+    display: none;
+  }
   .trust-marquee {
     overflow: visible;
     mask-image: none;

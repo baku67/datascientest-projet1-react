@@ -22,11 +22,14 @@ export default function TrustSection() {
     <section className="trust-section">
       <h2>{t("trust_section_title")}</h2>
 
-      {/* Desktop : ton layout normal / Mobile : marquee */}
       <div className="trust-marquee" aria-label="Trusted by">
         <div className="trust-marquee__track">
-          {/* 1ère passe */}
-          <ul className="trust-logos" role="list" aria-hidden="true">
+          <ul
+            id="trust-logos-1"
+            className="trust-logos"
+            role="list"
+            aria-hidden="true"
+          >
             {ITEMS.map((it) => (
               <li key={it.label}>
                 <img src={it.src} alt={it.alt} />
@@ -35,8 +38,12 @@ export default function TrustSection() {
             ))}
           </ul>
 
-          {/* 2ème passe (clone) */}
-          <ul className="trust-logos" role="list" aria-hidden="true">
+          <ul
+            id="trust-logos-2"
+            className="trust-logos"
+            role="list"
+            aria-hidden="true"
+          >
             {ITEMS.map((it) => (
               <li key={`${it.label}-clone`}>
                 <img src={it.src} alt="" />
