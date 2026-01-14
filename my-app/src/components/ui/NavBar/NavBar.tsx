@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import "./NavBar.scss";
 import LanguageSwitcher from "../ToggleLang/ToggleLang";
+import { NavLink } from "react-router-dom";
 
 export default function NavBar() {
   const { t } = useTranslation();
@@ -13,20 +14,20 @@ export default function NavBar() {
     <header className="header">
       <nav className="nav" aria-label="Main navigation">
         <div className="nav-left">
-          <a className="nav-link" href="#" onClick={close}>
+          <NavLink className="nav-link" to="/" onClick={close}>
             <span className="nav-title">weeb</span>
-          </a>
+          </NavLink>
 
           <ul className="nav-links" role="list">
             <li>
-              <a className="nav-link" href="#" onClick={close}>
+              <NavLink className="nav-link" to="/about" onClick={close}>
                 {t("about")}
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a className="nav-link" href="#" onClick={close}>
+              <NavLink className="nav-link" to="/contact" onClick={close}>
                 {t("contact")}
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>
@@ -59,14 +60,14 @@ export default function NavBar() {
       <div id="mobile-menu" className={`nav-mobile ${isOpen ? "is-open" : ""}`}>
         <ul className="nav-mobile-links" role="list">
           <li>
-            <a className="nav-link" href="#" onClick={close}>
+            <NavLink className="nav-link" to="/about" onClick={close}>
               {t("about")}
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a className="nav-link" href="#" onClick={close}>
+            <NavLink className="nav-link" to="/contact" onClick={close}>
               {t("contact")}
-            </a>
+            </NavLink>
           </li>
           <li>
             <LanguageSwitcher />
@@ -74,12 +75,12 @@ export default function NavBar() {
         </ul>
 
         <div className="nav-mobile-auth">
-          <a className="nav-login" href="#" onClick={close}>
+          <NavLink className="nav-link" to="/login" onClick={close}>
             {t("login")}
-          </a>
-          <a className="nav-register" href="#" onClick={close}>
+          </NavLink>
+          <NavLink className="nav-link" to="/signup" onClick={close}>
             {t("signup")}
-          </a>
+          </NavLink>
         </div>
       </div>
 

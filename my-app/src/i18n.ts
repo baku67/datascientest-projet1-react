@@ -5,6 +5,9 @@ import LanguageDetector from "i18next-browser-languagedetector";
 const resources = {
   en: {
     translation: {
+      // 404 page
+      pagenotfound_text: "The page you are looking for does not exist.",
+      pagenotfound_go_back: "Go back to Home",
       // NAV
       about: "About Us",
       contact: "Contact",
@@ -31,7 +34,8 @@ const resources = {
       home_rowsection_1_imagealt: "Resources overview",
       // Home Row Section 2
       home_rowsection_2_titletop: "The web, an ever-evolving ecosystem",
-      home_rowsection_2_title: "Stay up to date with the latest trends",
+      home_rowsection_2_title:
+        "Stay up to date with the latest <primary>trends</primary>",
       home_rowsection_2_description:
         "Every week, we analyze what’s new on the web: emerging frameworks, SEO best practices, accessibility, and much more. Don’t miss any digital news!",
       home_rowsection_2_ctalabel: "Read the latest articles",
@@ -67,6 +71,9 @@ const resources = {
   },
   fr: {
     translation: {
+      // 404 page
+      pagenotfound_text: "La page que vous cherchez n'existe pas.",
+      pagenotfound_go_back: "Retourner à l'accueil",
       // NAV
       about: "À propos",
       contact: "Contact",
@@ -94,7 +101,8 @@ const resources = {
       // Home Row Section 2
       home_rowsection_2_titletop:
         "Le web, un écosystème en constante évolution",
-      home_rowsection_2_title: "Restez informé des dernières tendances",
+      home_rowsection_2_title:
+        "Restez informé des dernières <primary>tendances</primary>",
       home_rowsection_2_description:
         "Chaque semaine, nous analysons les nouveautés du web : frameworks émergents, bonnes pratiques SEO, accessibilité, et bien plus encore. Ne manquez aucune actualité du digital !",
       home_rowsection_2_ctalabel: "Lire les articles récents",
