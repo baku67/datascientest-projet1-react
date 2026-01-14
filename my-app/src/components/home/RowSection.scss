@@ -1,0 +1,120 @@
+.row-section {
+  //   background: radial-gradient(
+  //       1200px 600px at 15% 20%,
+  //       rgba(124, 58, 237, 0.22),
+  //       transparent 60%
+  //     ),
+  //     linear-gradient(180deg, #0b1220 0%, #0a1020 100%);
+  color: #e2e8f0;
+  padding: 56px 0;
+}
+
+.text-primary {
+  color: #c084fc;
+}
+
+.row-section__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 22px;
+
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 42px;
+  align-items: center;
+}
+
+.row-section--reverse .row-section__text {
+  order: 2;
+}
+.row-section--reverse .row-section__visual {
+  order: 1;
+}
+
+.row-section__eyebrow {
+  margin: 0 0 10px;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(226, 232, 240, 0.75);
+}
+
+.row-section__title {
+  margin: 0 0 14px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+
+  font-size: clamp(30px, 4vw, 46px);
+  color: var(--text);
+}
+
+.row-section__description {
+  margin: 0 0 18px;
+  max-width: 46ch;
+  line-height: 1.6;
+  font-size: 13px;
+  color: rgba(226, 232, 240, 0.78);
+}
+
+.row-section__cta {
+  margin-top: 10px;
+}
+
+.row-section__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  background: transparent;
+  border: 0;
+  padding: 0;
+
+  color: #e2e8f0;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+
+  opacity: 0.9;
+  transition: opacity 140ms ease, transform 140ms ease;
+
+  &:hover {
+    opacity: 1;
+    transform: translateX(2px);
+  }
+}
+
+.row-section__arrow {
+  opacity: 0.9;
+}
+
+.row-section__visual {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.row-section__image {
+  width: min(520px, 100%);
+  height: auto;
+  border-radius: 14px;
+
+  //   background: rgba(255, 255, 255, 0.05);
+  //   box-shadow: 0 14px 44px rgba(0, 0, 0, 0.35);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .row-section__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .row-section__visual {
+    justify-content: flex-start;
+  }
+
+  .row-section--reverse .row-section__text,
+  .row-section--reverse .row-section__visual {
+    order: initial;
+  }
+}

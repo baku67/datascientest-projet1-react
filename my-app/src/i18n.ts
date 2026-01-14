@@ -10,6 +10,7 @@ const resources = {
       contact: "Contact",
       login: "Log In",
       signup: "Join Now",
+
       // Home
       hero_title_1: "Explore the",
       hero_title_2: "Web",
@@ -20,6 +21,22 @@ const resources = {
       discover_btn: "Discover our articles",
       newsletter_btn: "Subscribe to the newsletter",
       trust_section_title: "Trusted by Industry Leaders",
+      // Home Row Section 1
+      home_rowsection_1_titletop: "Resources for all skill levels",
+      home_rowsection_1_title:
+        "<primary>Learn</primary> and <primary>grow</primary>",
+      home_rowsection_1_description:
+        "Whether you are just starting out in web development or you are an experienced professional looking to deepen your knowledge, we provide tutorials, guides, and best practices to help you learn efficiently.",
+      home_rowsection_1_ctalabel: "Explore resources",
+      home_rowsection_1_imagealt: "Resources overview",
+      // Home Row Section 2
+      home_rowsection_2_titletop: "The web, an ever-evolving ecosystem",
+      home_rowsection_2_title: "Stay up to date with the latest trends",
+      home_rowsection_2_description:
+        "Every week, we analyze what’s new on the web: emerging frameworks, SEO best practices, accessibility, and much more. Don’t miss any digital news!",
+      home_rowsection_2_ctalabel: "Read the latest articles",
+      home_rowsection_2_imagealt: "Illustration",
+
       // FOOTER
       footer_product: "Product",
       footer_pricing: "Pricing",
@@ -55,6 +72,7 @@ const resources = {
       contact: "Contact",
       login: "Connexion",
       signup: "Créer un compte",
+
       // Home
       hero_title_1: "Explorez le",
       hero_title_2: "Web",
@@ -65,6 +83,23 @@ const resources = {
       discover_btn: "Découvrir les articles",
       newsletter_btn: "S'abonner à la newsletter",
       trust_section_title: "Ils nous font confiance",
+      // Home Row Section 1
+      home_rowsection_1_titletop: "Des ressources pour tous les niveaux",
+      home_rowsection_1_title:
+        "<primary>Apprenez</primary> et <primary>progressez</primary>",
+      home_rowsection_1_description:
+        "Que vous débutiez en développement web ou que vous soyez un expert cherchant à approfondir vos connaissances, nous vous proposons des tutoriels, guides et bonnes pratiques pour apprendre efficacement.",
+      home_rowsection_1_ctalabel: "Explorer les ressources",
+      home_rowsection_1_imagealt: "Aperçu des ressources",
+      // Home Row Section 2
+      home_rowsection_2_titletop:
+        "Le web, un écosystème en constante évolution",
+      home_rowsection_2_title: "Restez informé des dernières tendances",
+      home_rowsection_2_description:
+        "Chaque semaine, nous analysons les nouveautés du web : frameworks émergents, bonnes pratiques SEO, accessibilité, et bien plus encore. Ne manquez aucune actualité du digital !",
+      home_rowsection_2_ctalabel: "Lire les articles récents",
+      home_rowsection_2_imagealt: "Illustration",
+
       // FOOTER
       footer_product: "Produits",
       footer_pricing: "Prix",

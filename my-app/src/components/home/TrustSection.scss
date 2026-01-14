@@ -6,20 +6,30 @@
   }
 
   .trust-logos {
-    list-style-type: none;
+    list-style: none;
     width: 100%;
-    display: inline-flex;
-    justify-content: space-evenly;
+    padding: 0;
+    margin: 18px 0 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px 26px;
     align-items: center;
 
     li {
       display: inline-flex;
-      justify-content: center;
       align-items: center;
-      gap: 5px;
+      gap: 8px;
 
       img {
         width: 30px;
+        height: auto;
+        flex: 0 0 auto;
+      }
+
+      span {
+        white-space: nowrap;
       }
     }
   }
