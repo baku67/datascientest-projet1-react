@@ -15,37 +15,37 @@ export default function Footer() {
     {
       title: t("footer_product"),
       links: [
-        { label: t("footer_pricing"), href: "#" },
-        { label: t("footer_overview"), href: "#" },
-        { label: t("footer_browse"), href: "#" },
-        { label: t("footer_accessibility"), href: "#" },
+        { label: t("footer_pricing"), href: "/pricing" },
+        { label: t("footer_overview"), href: "/overview" },
+        { label: t("footer_browse"), href: "/browse" },
+        { label: t("footer_accessibility"), href: "/accessibility" },
         { label: t("footer_five"), href: "#" },
       ],
     },
     {
       title: t("footer_solutions"),
       links: [
-        { label: t("footer_brainstorming"), href: "#" },
-        { label: t("footer_ideation"), href: "#" },
-        { label: t("footer_wireframing"), href: "#" },
-        { label: t("footer_research"), href: "#" },
+        { label: t("footer_brainstorming"), href: "/brainstorming" },
+        { label: t("footer_ideation"), href: "/ideation" },
+        { label: t("footer_wireframing"), href: "/wireframing" },
+        { label: t("footer_research"), href: "/research" },
       ],
     },
     {
       title: t("footer_resources"),
       links: [
-        { label: t("footer_help_center"), href: "#" },
-        { label: t("footer_blog"), href: "#" },
-        { label: t("footer_tutorials"), href: "#" },
+        { label: t("footer_help_center"), href: "/help-center" },
+        { label: t("footer_blog"), href: "/blog" },
+        { label: t("footer_tutorials"), href: "/tutorials" },
       ],
     },
     {
       title: t("footer_company"),
       links: [
-        { label: t("footer_about"), href: "#" },
-        { label: t("footer_press"), href: "#" },
-        { label: t("footer_events"), href: "#" },
-        { label: t("footer_careers"), href: "#" },
+        { label: t("footer_about"), href: "/about" },
+        { label: t("footer_press"), href: "/press" },
+        { label: t("footer_events"), href: "/events" },
+        { label: t("footer_careers"), href: "/careers" },
       ],
     },
   ];
