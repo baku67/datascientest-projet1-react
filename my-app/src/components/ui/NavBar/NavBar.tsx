@@ -75,10 +75,10 @@ export default function NavBar() {
         </ul>
 
         <div className="nav-mobile-auth">
-          <NavLink className="nav-link" to="/login" onClick={close}>
+          <NavLink className="nav-login" to="/login" onClick={close}>
             {t("login")}
           </NavLink>
-          <NavLink className="nav-link" to="/signup" onClick={close}>
+          <NavLink className="nav-register" to="/signup" onClick={close}>
             {t("signup")}
           </NavLink>
         </div>

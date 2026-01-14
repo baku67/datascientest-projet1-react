@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import Footer from "../components/ui/Footer/Footer";
 import NavBar from "../components/ui/NavBar/NavBar";
+import FormSection from "../components/contact/FormSection/FormSection";
 
 function ContactPage() {
   const { t } = useTranslation();
@@ -8,7 +9,11 @@ function ContactPage() {
   return (
     <>
       <NavBar />
-      <p>Contenu</p>
+      <section>
+        <h1>{t("contact_page_title")}</h1>
+        <p>{t("contact_page_description")}</p>
+      </section>
+      <FormSection />
       <Footer />
     </>
   );

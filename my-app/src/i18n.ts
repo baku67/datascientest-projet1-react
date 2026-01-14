@@ -41,6 +41,20 @@ const resources = {
       home_rowsection_2_ctalabel: "Read the latest articles",
       home_rowsection_2_imagealt: "Illustration",
 
+      // Contact Page
+      contact_page_title: "Your opinion matters",
+      contact_page_description:
+        "Your feedback is essential for us to improve! Share your experience, tell us what you like and what we could improve. Your suggestions help us make this blog an increasingly useful and rewarding resource. ",
+      contact_form_name_label: "Name",
+      contact_form_name_placeholder: "Enter your name",
+      contact_form_forname_label: "First Name",
+      contact_form_forname_placeholder: "Enter your first name",
+      contact_form_email_label: "Email",
+      contact_form_email_placeholder: "Enter your email address",
+      contact_form_message_label: "Message",
+      contact_form_message_placeholder: "Write your message here",
+      contact_form_submit_button: "Send Message",
+
       // FOOTER
       footer_product: "Product",
       footer_pricing: "Pricing",
@@ -107,6 +121,20 @@ const resources = {
         "Chaque semaine, nous analysons les nouveautés du web : frameworks émergents, bonnes pratiques SEO, accessibilité, et bien plus encore. Ne manquez aucune actualité du digital !",
       home_rowsection_2_ctalabel: "Lire les articles récents",
       home_rowsection_2_imagealt: "Illustration",
+
+      // Contact Page
+      contact_page_title: "Votre avis compte !",
+      contact_page_description:
+        "Votre retour est essentiel pour nous améliorer ! Partagez votre expérience, dites-nous ce que vous aimez et ce que nous pourrions améliorer. Vos suggestions nous aident à faire de ce blog une ressource toujours plus utile et enrichissante. ",
+      contact_form_name_label: "Nom",
+      contact_form_name_placeholder: "Entrez votre nom",
+      contact_form_forname_label: "Prénom",
+      contact_form_forname_placeholder: "Entrez votre prénom",
+      contact_form_email_label: "Email",
+      contact_form_email_placeholder: "Entrez votre adresse email",
+      contact_form_message_label: "Message",
+      contact_form_message_placeholder: "Écrivez votre message ici",
+      contact_form_submit_button: "Envoyer le message",
 
       // FOOTER
       footer_product: "Produits",
