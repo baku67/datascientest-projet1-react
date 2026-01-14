@@ -41,6 +41,14 @@ const resources = {
       home_rowsection_2_ctalabel: "Read the latest articles",
       home_rowsection_2_imagealt: "Illustration",
 
+      // LoginPage
+      login_page_title: "Log in",
+      login_form_email_label: "Email",
+      login_form_email_placeholder: "Enter your email address",
+      login_form_password_label: "Password",
+      login_form_password_placeholder: "Enter your password",
+      login_form_submit_button: "Log In",
+
       // Contact Page
       contact_page_title: "Your opinion matters",
       contact_page_description:
@@ -121,6 +129,14 @@ const resources = {
         "Chaque semaine, nous analysons les nouveautés du web : frameworks émergents, bonnes pratiques SEO, accessibilité, et bien plus encore. Ne manquez aucune actualité du digital !",
       home_rowsection_2_ctalabel: "Lire les articles récents",
       home_rowsection_2_imagealt: "Illustration",
+
+      // LoginPage
+      login_page_title: "Se connecter",
+      login_form_email_label: "Email",
+      login_form_email_placeholder: "Entrez votre adresse email",
+      login_form_password_label: "Mot de passe",
+      login_form_password_placeholder: "Entrez votre mot de passe",
+      login_form_submit_button: "Se connecter",
 
       // Contact Page
       contact_page_title: "Votre avis compte !",

@@ -35,12 +35,12 @@ export default function NavBar() {
         <div className="nav-right">
           <LanguageSwitcher />
 
-          <a className="nav-login" href="#" onClick={close}>
+          <NavLink className="nav-login" to="/login" onClick={close}>
             {t("login")}
-          </a>
-          <a className="nav-register" href="#" onClick={close}>
+          </NavLink>
+          <NavLink className="nav-register" to="/register" onClick={close}>
             {t("signup")}
-          </a>
+          </NavLink>
         </div>
 
         {/* Burger */}
