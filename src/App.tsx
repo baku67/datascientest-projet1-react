@@ -1,7 +1,7 @@
 import { Routes, Route, Navigate } from "react-router-dom";
-import HomePage from "./pages/HomePage";
+import HomePage from "./pages/HomePage/HomePage";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
-import ContactPage from "./pages/ContactPage";
+import ContactPage from "./pages/ContactPage/ContactPage";
 
 export default function App() {
   return (

@@ -1,9 +1,9 @@
 import { useTranslation } from "react-i18next";
-import HeroSection from "../components/home/HeroSection/HeroSection";
-import RowSection from "../components/home/RowSection/RowSection";
-import TrustSection from "../components/home/TrustSection/TrustSection";
-import Footer from "../components/ui/Footer/Footer";
-import NavBar from "../components/ui/NavBar/NavBar";
+import HeroSection from "../../components/home/HeroSection/HeroSection";
+import RowSection from "../../components/home/RowSection/RowSection";
+import TrustSection from "../../components/home/TrustSection/TrustSection";
+import Footer from "../../components/ui/Footer/Footer";
+import NavBar from "../../components/ui/NavBar/NavBar";
 
 function HomePage() {
   const { t } = useTranslation();

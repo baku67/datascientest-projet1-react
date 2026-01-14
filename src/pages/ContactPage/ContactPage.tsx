@@ -1,7 +1,8 @@
 import { useTranslation } from "react-i18next";
-import Footer from "../components/ui/Footer/Footer";
-import NavBar from "../components/ui/NavBar/NavBar";
-import FormSection from "../components/contact/FormSection/FormSection";
+import Footer from "../../components/ui/Footer/Footer";
+import NavBar from "../../components/ui/NavBar/NavBar";
+import FormSection from "../../components/contact/FormSection/FormSection";
+import "./ContactPage.scss";
 
 function ContactPage() {
   const { t } = useTranslation();
