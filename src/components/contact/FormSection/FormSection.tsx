@@ -16,7 +16,7 @@ type ContactFormValues = {
 function FormSection() {
   const { t } = useTranslation();
 
-  // Schéma Zod (messages i18n)
+  // Schéma Zod (+ messages i18n)
   const schema = useMemo(
     () =>
       z.object({
