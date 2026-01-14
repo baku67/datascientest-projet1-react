@@ -48,6 +48,36 @@ const resources = {
       login_form_password_label: "Password",
       login_form_password_placeholder: "Enter your password",
       login_form_submit_button: "Log In",
+      no_account_question: "Don't have an account? You can ",
+      register_create_one: "create one",
+      forgot_password: "Forgot Password?",
+
+      // RegisterPage
+      register_page_title: "Sign Up",
+      register_form_email_label: "Email",
+      register_form_email_placeholder: "Enter your email address",
+      register_form_password_label: "Password",
+      register_form_password_placeholder: "Enter your password",
+      register_form_submit_button: "Sign Up",
+      auth_error_repeatpassword_required: "Please repeat the password.",
+      auth_error_repeatpassword_mismatch: "Passwords do not match.",
+      auth_error_password_min: "Password too short (minimum 12 characters).",
+      auth_error_password_lower:
+        "Password must contain at least one lowercase letter.",
+      auth_error_password_upper:
+        "Password must contain at least one uppercase letter.",
+      auth_error_password_digit: "Password must contain at least one digit.",
+      auth_error_password_special:
+        "Password must contain at least one special character.",
+      register_form_repeat_password_label: "Repeat Password",
+      register_form_repeat_password_placeholder: "Repeat your password",
+      already_registered_question: "Already registered? ",
+      go_to_login: "Log in",
+
+      // AboutUs Page
+      about_us_page_title: "About Us",
+      about_us_page_description:
+        "Welcome to our blog dedicated to web development! Our mission is to provide high-quality content to help developers, designers, and digital enthusiasts stay informed about the latest trends, technologies, and best practices in the web world. Whether you are a beginner looking to learn the basics or an experienced professional seeking advanced knowledge, our articles, tutorials, and resources are designed to meet your needs. Join our community and explore the exciting world of web development with us!",
 
       // Contact Page
       contact_page_title: "Your opinion matters",
@@ -137,6 +167,39 @@ const resources = {
       login_form_password_label: "Mot de passe",
       login_form_password_placeholder: "Entrez votre mot de passe",
       login_form_submit_button: "Se connecter",
+      no_account_question: "Vous n’avez pas de compte ? Vous pouvez en ",
+      register_create_one: "créer un",
+      already_registered_question: "Déjà inscrit.e ? ",
+      go_to_login: "Connectez-vous",
+
+      // RegisterPage
+      register_page_title: "S'inscrire",
+      register_form_email_label: "Email",
+      register_form_email_placeholder: "Entrez votre adresse email",
+      register_form_password_label: "Mot de passe",
+      register_form_password_placeholder: "Entrez votre mot de passe",
+      register_form_submit_button: "S'inscrire",
+      auth_error_repeatpassword_required: "Veuillez répéter le mot de passe.",
+      auth_error_repeatpassword_mismatch:
+        "Les mots de passe ne correspondent pas.",
+      auth_error_password_min:
+        "Mot de passe trop court (12 caractères minimum).",
+      auth_error_password_lower:
+        "Le mot de passe doit contenir au moins une minuscule.",
+      auth_error_password_upper:
+        "Le mot de passe doit contenir au moins une majuscule.",
+      auth_error_password_digit:
+        "Le mot de passe doit contenir au moins un chiffre.",
+      auth_error_password_special:
+        "Le mot de passe doit contenir au moins un caractère spécial.",
+      register_form_repeat_password_label: "Répéter le mot de passe",
+      register_form_repeat_password_placeholder: "Répétez votre mot de passe",
+      forgot_password: "Mot de passe oublié ?",
+
+      // AboutUs Page
+      about_us_page_title: "À propos",
+      about_us_page_description:
+        "Bienvenue sur notre blog dédié au développement web ! Notre mission est de fournir du contenu de haute qualité pour aider les développeurs, designers et passionnés du digital à rester informés des dernières tendances, technologies et meilleures pratiques du monde du web. Que vous soyez débutant cherchant à apprendre les bases ou professionnel expérimenté en quête de connaissances avancées, nos articles, tutoriels et ressources sont conçus pour répondre à vos besoins. Rejoignez notre communauté et explorez avec nous l'univers passionnant du développement web !",
 
       // Contact Page
       contact_page_title: "Votre avis compte !",

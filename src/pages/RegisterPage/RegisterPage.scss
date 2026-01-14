@@ -1,4 +1,4 @@
-.login-container {
+.register-container {
   max-width: 400px;
 }
 
@@ -6,7 +6,7 @@ form {
   margin: 50px auto;
 }
 
-.go-to-login-link {
+.login-links {
   text-decoration: underline;
   color: #be78ff !important;
 
@@ -14,12 +14,6 @@ form {
   text-decoration-thickness: 3px;
 }
 
-.login-footer-links {
+.go-to-register-text {
   margin-top: 30px !important;
-  text-align: center;
-}
-
-.go-to-login-text,
-.forgot-password-link {
-  text-align: center;
 }

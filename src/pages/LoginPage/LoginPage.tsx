@@ -1,5 +1,3 @@
-/* eslint-disable react-hooks/rules-of-hooks */
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useTranslation } from "react-i18next";
 import Footer from "../../components/ui/Footer/Footer";
 import NavBar from "../../components/ui/NavBar/NavBar";
@@ -19,6 +17,7 @@ import {
   InputAdornment,
   IconButton,
 } from "@mui/material";
+import { NavLink } from "react-router-dom";
 
 type LoginFormValues = {
   email: string;
@@ -137,9 +136,31 @@ function LoginPage() {
                 {t("login_form_submit_button")}
               </Button>
             </Box>
+
+            <div className="login-footer-links">
+              <NavLink
+                to="/forgot-password"
+                onClick={close}
+                className="forgot-password-link login-links"
+              >
+                {t("forgot_password")}
+              </NavLink>
+
+              <p className="go-to-login-text">
+                {t("no_account_question")}
+                <NavLink
+                  to="/signup"
+                  onClick={close}
+                  className="go-to-register-link login-links"
+                >
+                  {t("register_create_one")}
+                </NavLink>
+              </p>
+            </div>
           </Stack>
         </Box>
       </section>
+
       <Footer />
     </>
   );
