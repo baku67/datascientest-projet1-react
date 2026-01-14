@@ -28,4 +28,6 @@ npm run preview
 - Vite + React
 - React Router
 - i18next (traductions)
+- react-hook-forms + ZOD
+- MUI + icons-material
 - country-flag-icons
