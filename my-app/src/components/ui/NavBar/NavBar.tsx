@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import "./NavBar.scss";
-import LanguageSwitcher from "./ToggleLang/ToggleLang";
+import LanguageSwitcher from "../ToggleLang/ToggleLang";
 
 export default function NavBar() {
   const { t } = useTranslation();
