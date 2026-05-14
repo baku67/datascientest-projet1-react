@@ -107,6 +107,16 @@ const resources = {
       blog_create_cancel_button: "Cancel",
       blog_create_submit_button: "Simulate creation",
 
+      // Blog Article Page
+      blog_article_open_aria: "Read article",
+      blog_article_back_button: "← Back to blog",
+      blog_article_detail_eyebrow: "Article",
+      blog_article_loading: "Loading article...",
+      blog_article_fetch_error: "Unable to load this article right now.",
+      blog_article_not_found: "Article not found.",
+      blog_article_author: "Written by author #{{userId}}",
+      blog_article_full_content_title: "Article content",
+
       // Contact Page
       contact_page_title: "Your opinion matters",
       contact_page_description:
@@ -261,6 +271,17 @@ const resources = {
       blog_create_form_tags_placeholder: "react, frontend, bonnes pratiques",
       blog_create_cancel_button: "Annuler",
       blog_create_submit_button: "Simuler l'ajout",
+
+      // Blog Article Page
+      blog_article_open_aria: "Lire l'article",
+      blog_article_back_button: "← Retour au blog",
+      blog_article_detail_eyebrow: "Article",
+      blog_article_loading: "Chargement de l'article...",
+      blog_article_fetch_error:
+        "Impossible de charger cet article pour le moment.",
+      blog_article_not_found: "Article introuvable.",
+      blog_article_author: "Rédigé par l'auteur n°{{userId}}",
+      blog_article_full_content_title: "Contenu de l'article",
 
       // Contact Page
       contact_page_title: "Votre avis compte !",

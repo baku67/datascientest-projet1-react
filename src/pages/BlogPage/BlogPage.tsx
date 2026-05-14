@@ -178,7 +178,14 @@ function BlogPage() {
           {!isLoading && !errorMessage && (
             <div className="blog-card-list">
               {articles.map((article) => (
-                <article className="blog-card" key={article.id}>
+                <Link
+                  className="blog-card"
+                  key={article.id}
+                  to={`/blog/${article.id}`}
+                  aria-label={`${t("blog_article_open_aria", {
+                    defaultValue: "Lire l'article",
+                  })} : ${article.title}`}
+                >
                   <div className="blog-card__content">
                     <div className="blog-card__meta">
                       <time dateTime={article.publishedAt}>
@@ -217,7 +224,7 @@ function BlogPage() {
                       })}
                     </span>
                   </div>
-                </article>
+                </Link>
               ))}
             </div>
           )}
