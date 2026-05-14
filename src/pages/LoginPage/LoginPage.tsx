@@ -37,21 +37,21 @@ function LoginPage() {
             1,
             t("contact_form_error_email_required", {
               defaultValue: "Email requis",
-            })
+            }),
           )
           .email(
             t("contact_form_error_email_invalid", {
               defaultValue: "Email invalide",
-            })
+            }),
           ),
         password: z.string().min(
           1,
           t("auth_error_password_required", {
             defaultValue: "Mot de passe requis.",
-          })
+          }),
         ),
       }),
-    [t]
+    [t],
   );
 
   const {
@@ -142,7 +142,6 @@ function LoginPage() {
               <div className="login-footer-links">
                 <NavLink
                   to="/forgot-password"
-                  onClick={close}
                   className="forgot-password-link login-links"
                 >
                   {t("forgot_password")}
@@ -152,7 +151,6 @@ function LoginPage() {
                   {t("no_account_question")}
                   <NavLink
                     to="/signup"
-                    onClick={close}
                     className="go-to-register-link login-links"
                   >
                     {t("register_create_one")}

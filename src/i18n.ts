@@ -53,6 +53,19 @@ const resources = {
       register_create_one: "create one",
       forgot_password: "Forgot Password?",
 
+      // ForgotPasswordPage
+      forgot_password_eyebrow: "Reset",
+      forgot_password_page_title: "Forgot password",
+      forgot_password_page_description:
+        "Enter your email address. If it matches an existing account, you will receive a reset link.",
+      forgot_password_email_label: "Email address",
+      forgot_password_email_placeholder: "Enter your email address",
+      forgot_password_submit_button: "Send reset link",
+      forgot_password_back_to_login: "← Back to login",
+      forgot_password_feedback_title: "Request received",
+      forgot_password_feedback_message:
+        "If this email address is used, you will receive an email to reset your password.",
+
       // RegisterPage
       register_page_title: "Sign Up",
       register_form_email_label: "Email",
@@ -213,6 +226,19 @@ const resources = {
       register_create_one: "créer un",
       already_registered_question: "Déjà inscrit.e ? ",
       go_to_login: "Connectez-vous",
+
+      // ForgotPasswordPage
+      forgot_password_eyebrow: "Réinitialisation",
+      forgot_password_page_title: "Mot de passe oublié",
+      forgot_password_page_description:
+        "Entrez votre adresse email. Si elle correspond à un compte existant, vous recevrez un lien de réinitialisation.",
+      forgot_password_email_label: "Adresse email",
+      forgot_password_email_placeholder: "Entrez votre adresse email",
+      forgot_password_submit_button: "Envoyer le lien",
+      forgot_password_back_to_login: "← Retour à la connexion",
+      forgot_password_feedback_title: "Demande prise en compte",
+      forgot_password_feedback_message:
+        "Si cette adresse email est utilisée, vous recevrez un mail pour réinitialiser votre mot de passe.",
 
       // RegisterPage
       register_page_title: "S'inscrire",
