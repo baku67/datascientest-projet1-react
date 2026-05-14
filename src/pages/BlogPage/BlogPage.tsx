@@ -4,6 +4,7 @@ import Footer from "../../components/ui/Footer/Footer";
 import NavBar from "../../components/ui/NavBar/NavBar";
 import "./BlogPage.scss";
 import { Link } from "react-router-dom";
+import ArticleCard from "../../components/blog/ArticleCard";
 
 type DummyPost = {
   id: number;
@@ -178,53 +179,38 @@ function BlogPage() {
           {!isLoading && !errorMessage && (
             <div className="blog-card-list">
               {articles.map((article) => (
-                <Link
-                  className="blog-card"
+                <ArticleCard
                   key={article.id}
+                  title={article.title}
+                  excerpt={article.body}
                   to={`/blog/${article.id}`}
-                  aria-label={`${t("blog_article_open_aria", {
+                  ariaLabel={`${t("blog_article_open_aria", {
                     defaultValue: "Lire l'article",
                   })} : ${article.title}`}
-                >
-                  <div className="blog-card__content">
-                    <div className="blog-card__meta">
-                      <time dateTime={article.publishedAt}>
-                        {formatPublicationDate(article.publishedAt)}
-                      </time>
-                      <span aria-hidden="true">•</span>
-                      <span>
-                        {t("blog_article_reading_time", {
-                          count: article.readingTime,
-                          defaultValue: "{{count}} min de lecture",
-                        })}
-                      </span>
-                    </div>
-
-                    <h3>{article.title}</h3>
-                    <p>{article.body}</p>
-
-                    <div className="blog-card__tags" aria-label="Tags">
-                      {article.tags.slice(0, 3).map((tag) => (
-                        <span key={tag}>#{tag}</span>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="blog-card__stats" aria-label="Statistiques">
-                    <span>
-                      {t("blog_article_views", {
+                  publishedAt={article.publishedAt}
+                  publishedAtLabel={formatPublicationDate(article.publishedAt)}
+                  readingTimeLabel={t("blog_article_reading_time", {
+                    count: article.readingTime,
+                    defaultValue: "{{count}} min de lecture",
+                  })}
+                  tags={article.tags}
+                  stats={[
+                    {
+                      label: "views",
+                      value: t("blog_article_views", {
                         count: article.views ?? 0,
                         defaultValue: "{{count}} vues",
-                      })}
-                    </span>
-                    <span>
-                      {t("blog_article_likes", {
+                      }),
+                    },
+                    {
+                      label: "likes",
+                      value: t("blog_article_likes", {
                         count: article.reactions?.likes ?? 0,
                         defaultValue: "{{count}} likes",
-                      })}
-                    </span>
-                  </div>
-                </Link>
+                      }),
+                    },
+                  ]}
+                />
               ))}
             </div>
           )}
