@@ -66,6 +66,25 @@ const resources = {
       forgot_password_feedback_message:
         "If this email address is used, you will receive an email to reset your password.",
 
+      // ResetPasswordPage
+      reset_password_eyebrow: "Security",
+      reset_password_page_title: "Create a new password",
+      reset_password_page_description:
+        "Choose a secure new password to complete your account recovery.",
+      reset_password_password_label: "New password",
+      reset_password_password_placeholder: "Enter your new password",
+      reset_password_repeat_password_label: "Confirm new password",
+      reset_password_repeat_password_placeholder: "Repeat your new password",
+      reset_password_submit_button: "Reset password",
+      reset_password_back_to_login: "← Back to login",
+      reset_password_feedback_title: "Password updated",
+      reset_password_feedback_message:
+        "Your password has been reset. You can now log in.",
+      reset_password_go_to_login: "Log in",
+      reset_password_invalid_link_title: "Invalid link",
+      reset_password_invalid_link_message:
+        "The reset link is invalid or incomplete.",
+
       // RegisterPage
       register_page_title: "Sign Up",
       register_form_email_label: "Email",
@@ -239,6 +258,26 @@ const resources = {
       forgot_password_feedback_title: "Demande prise en compte",
       forgot_password_feedback_message:
         "Si cette adresse email est utilisée, vous recevrez un mail pour réinitialiser votre mot de passe.",
+
+      // ResetPasswordPage
+      reset_password_eyebrow: "Sécurité",
+      reset_password_page_title: "Créer un nouveau mot de passe",
+      reset_password_page_description:
+        "Choisissez un nouveau mot de passe sécurisé pour finaliser la réinitialisation de votre compte.",
+      reset_password_password_label: "Nouveau mot de passe",
+      reset_password_password_placeholder: "Entrez votre nouveau mot de passe",
+      reset_password_repeat_password_label: "Confirmer le nouveau mot de passe",
+      reset_password_repeat_password_placeholder:
+        "Répétez votre nouveau mot de passe",
+      reset_password_submit_button: "Réinitialiser le mot de passe",
+      reset_password_back_to_login: "← Retour à la connexion",
+      reset_password_feedback_title: "Mot de passe modifié",
+      reset_password_feedback_message:
+        "Votre mot de passe a bien été réinitialisé. Vous pouvez maintenant vous connecter.",
+      reset_password_go_to_login: "Se connecter",
+      reset_password_invalid_link_title: "Lien invalide",
+      reset_password_invalid_link_message:
+        "Le lien de réinitialisation est invalide ou incomplet.",
 
       // RegisterPage
       register_page_title: "S'inscrire",

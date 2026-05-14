@@ -9,6 +9,7 @@ import BlogPage from "./pages/BlogPage/BlogPage";
 import BlogCreatePage from "./pages/BlogCreatePage/BlogCreatePage";
 import BlogArticlePage from "./pages/BlogArticlePage/BlogArticlePage";
 import ForgotPasswordPage from "./pages/ForgotPasswordPage/ForgotPasswordPage";
+import ResetPasswordPage from "./pages/ResetPasswordPage/ResetPasswordPage";
 
 export default function App() {
   return (
@@ -21,6 +22,10 @@ export default function App() {
       <Route path="/about" element={<AboutUsPage />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/forgot-password" element={<ForgotPasswordPage />} />
+      <Route
+        path="/reset-password/:uid/:token"
+        element={<ResetPasswordPage />}
+      />
       <Route path="/signup" element={<RegisterPage />} />
       <Route path="/404" element={<NotFoundPage />} />
       <Route path="*" element={<Navigate to="/404" replace />} />

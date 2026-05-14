@@ -4,11 +4,9 @@ import NavBar from "../../components/ui/NavBar/NavBar";
 import "./RegisterPage.scss";
 import { useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
-import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
-
 import {
   Box,
   Button,
@@ -18,89 +16,15 @@ import {
   IconButton,
 } from "@mui/material";
 import { NavLink } from "react-router-dom";
-
-type RegisterFormValues = {
-  email: string;
-  password: string;
-  repeatPassword: string;
-};
+import {
+  createRegisterSchema,
+  type RegisterFormValues,
+} from "../../validation/AuthValidation";
 
 function RegisterPage() {
   const { t } = useTranslation();
 
-  // Schéma Zod (+ messages i18n)
-  const schema = useMemo(
-    () =>
-      z
-        .object({
-          email: z
-            .string()
-            .min(
-              1,
-              t("contact_form_error_email_required", {
-                defaultValue: "Email requis",
-              })
-            )
-            .email(
-              t("contact_form_error_email_invalid", {
-                defaultValue: "Email invalide",
-              })
-            ),
-
-          password: z
-            .string()
-            .min(
-              12, // la CNIL recommande 12 caractères minimum
-              t("auth_error_password_min", {
-                defaultValue:
-                  "Mot de passe trop court (12 caractères minimum).",
-              })
-            )
-            .regex(/[a-z]/, {
-              message: t("auth_error_password_lower", {
-                defaultValue:
-                  "Le mot de passe doit contenir au moins une minuscule.",
-              }),
-            })
-            .regex(/[A-Z]/, {
-              message: t("auth_error_password_upper", {
-                defaultValue:
-                  "Le mot de passe doit contenir au moins une majuscule.",
-              }),
-            })
-            .regex(/[0-9]/, {
-              message: t("auth_error_password_digit", {
-                defaultValue:
-                  "Le mot de passe doit contenir au moins un chiffre.",
-              }),
-            })
-            .regex(/[^a-zA-Z0-9]/, {
-              message: t("auth_error_password_special", {
-                defaultValue:
-                  "Le mot de passe doit contenir au moins un caractère spécial.",
-              }),
-            }),
-
-          repeatPassword: z.string().min(
-            1,
-            t("auth_error_repeatpassword_required", {
-              defaultValue: "Veuillez répéter le mot de passe.",
-            })
-          ),
-        })
-        .superRefine(({ password, repeatPassword }, ctx) => {
-          if (password !== repeatPassword) {
-            ctx.addIssue({
-              code: z.ZodIssueCode.custom,
-              path: ["repeatPassword"],
-              message: t("auth_error_repeatpassword_mismatch", {
-                defaultValue: "Les mots de passe ne correspondent pas.",
-              }),
-            });
-          }
-        }),
-    [t]
-  );
+  const schema = useMemo(() => createRegisterSchema(t), [t]);
 
   const {
     register,
