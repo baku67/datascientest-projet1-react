@@ -122,7 +122,7 @@ function BlogArticlePage() {
       <NavBar />
       <main className="page__content">
         <section className="blog-detail">
-          <Link className="blog-detail__back" to="/blog">
+          <Link className="blog-back-button" to="/blog">
             {t("blog_article_back_button", {
               defaultValue: "← Retour au blog",
             })}
@@ -137,7 +137,10 @@ function BlogArticlePage() {
           )}
 
           {!isLoading && errorMessage && (
-            <div className="blog-detail-state blog-detail-state--error" role="alert">
+            <div
+              className="blog-detail-state blog-detail-state--error"
+              role="alert"
+            >
               {errorMessage}
             </div>
           )}
@@ -174,7 +177,10 @@ function BlogArticlePage() {
                 </div>
               </header>
 
-              <div className="blog-detail-card__stats" aria-label="Statistiques">
+              <div
+                className="blog-detail-card__stats"
+                aria-label="Statistiques"
+              >
                 <span>
                   {t("blog_article_views", {
                     count: article.views ?? 0,

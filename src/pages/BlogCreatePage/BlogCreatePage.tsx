@@ -23,7 +23,8 @@ const initialFormValues: BlogFormValues = {
 
 function BlogCreatePage() {
   const { t } = useTranslation();
-  const [formValues, setFormValues] = useState<BlogFormValues>(initialFormValues);
+  const [formValues, setFormValues] =
+    useState<BlogFormValues>(initialFormValues);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const updateField = (field: keyof BlogFormValues, value: string) => {
@@ -50,8 +51,10 @@ function BlogCreatePage() {
 
       <main className="page__content">
         <section className="blog-create-page">
-          <Link className="blog-create-page__back-link" to="/blog">
-            {t("blog_create_back_button", { defaultValue: "← Retour au blog" })}
+          <Link className="blog-back-button" to="/blog">
+            {t("blog_article_back_button", {
+              defaultValue: "← Retour au blog",
+            })}
           </Link>
 
           <div className="blog-create-page__header">
@@ -115,7 +118,9 @@ function BlogCreatePage() {
                 <input
                   type="text"
                   value={formValues.author}
-                  onChange={(event) => updateField("author", event.target.value)}
+                  onChange={(event) =>
+                    updateField("author", event.target.value)
+                  }
                   placeholder={t("blog_create_form_author_placeholder", {
                     defaultValue: "Ex: Basile",
                   })}

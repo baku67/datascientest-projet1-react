@@ -3,7 +3,7 @@
   margin: 20px auto 72px;
 }
 
-.blog-detail__back {
+.blog-back-button {
   display: inline-flex;
   align-items: center;
   width: fit-content;
@@ -23,7 +23,7 @@
     background-color 160ms ease;
 }
 
-.blog-detail__back:hover {
+.blog-back-button:hover {
   transform: translateY(-2px);
   border-color: rgba(192, 132, 252, 0.34);
   background: rgba(15, 23, 42, 0.86);
