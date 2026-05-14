@@ -14,18 +14,41 @@ export default function NavBar() {
     <header className="header">
       <nav className="nav" aria-label="Main navigation">
         <div className="nav-left">
-          <NavLink className="nav-link" to="/" onClick={close}>
+          <NavLink className="nav-brand" to="/" onClick={close} end>
             <span className="nav-title">weeb</span>
           </NavLink>
 
           <ul className="nav-links" role="list">
             <li>
-              <NavLink className="nav-link" to="/about" onClick={close}>
+              <NavLink
+                className={({ isActive }) =>
+                  `nav-link${isActive ? " is-active" : ""}`
+                }
+                to="/about"
+                onClick={close}
+              >
                 {t("about")}
               </NavLink>
             </li>
             <li>
-              <NavLink className="nav-link" to="/contact" onClick={close}>
+              <NavLink
+                className={({ isActive }) =>
+                  `nav-link${isActive ? " is-active" : ""}`
+                }
+                to="/blog"
+                onClick={close}
+              >
+                {t("blog")}
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                className={({ isActive }) =>
+                  `nav-link${isActive ? " is-active" : ""}`
+                }
+                to="/contact"
+                onClick={close}
+              >
                 {t("contact")}
               </NavLink>
             </li>
@@ -35,10 +58,22 @@ export default function NavBar() {
         <div className="nav-right">
           <LanguageSwitcher />
 
-          <NavLink className="nav-login" to="/login" onClick={close}>
+          <NavLink
+            className={({ isActive }) =>
+              `nav-login${isActive ? " is-active" : ""}`
+            }
+            to="/login"
+            onClick={close}
+          >
             {t("login")}
           </NavLink>
-          <NavLink className="nav-register" to="/signup" onClick={close}>
+          <NavLink
+            className={({ isActive }) =>
+              `nav-register${isActive ? " is-active" : ""}`
+            }
+            to="/signup"
+            onClick={close}
+          >
             {t("signup")}
           </NavLink>
         </div>
@@ -60,12 +95,35 @@ export default function NavBar() {
       <div id="mobile-menu" className={`nav-mobile ${isOpen ? "is-open" : ""}`}>
         <ul className="nav-mobile-links" role="list">
           <li>
-            <NavLink className="nav-link" to="/about" onClick={close}>
+            <NavLink
+              className={({ isActive }) =>
+                `nav-link${isActive ? " is-active" : ""}`
+              }
+              to="/about"
+              onClick={close}
+            >
               {t("about")}
             </NavLink>
           </li>
           <li>
-            <NavLink className="nav-link" to="/contact" onClick={close}>
+            <NavLink
+              className={({ isActive }) =>
+                `nav-link${isActive ? " is-active" : ""}`
+              }
+              to="/blog"
+              onClick={close}
+            >
+              {t("blog")}
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              className={({ isActive }) =>
+                `nav-link${isActive ? " is-active" : ""}`
+              }
+              to="/contact"
+              onClick={close}
+            >
               {t("contact")}
             </NavLink>
           </li>
@@ -75,10 +133,22 @@ export default function NavBar() {
         </ul>
 
         <div className="nav-mobile-auth">
-          <NavLink className="nav-login" to="/login" onClick={close}>
+          <NavLink
+            className={({ isActive }) =>
+              `nav-login${isActive ? " is-active" : ""}`
+            }
+            to="/login"
+            onClick={close}
+          >
             {t("login")}
           </NavLink>
-          <NavLink className="nav-register" to="/signup" onClick={close}>
+          <NavLink
+            className={({ isActive }) =>
+              `nav-register${isActive ? " is-active" : ""}`
+            }
+            to="/signup"
+            onClick={close}
+          >
             {t("signup")}
           </NavLink>
         </div>

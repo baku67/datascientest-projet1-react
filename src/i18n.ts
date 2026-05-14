@@ -10,6 +10,7 @@ const resources = {
       pagenotfound_go_back: "Go back to Home",
       // NAV
       about: "About Us",
+      blog: "Blog",
       contact: "Contact",
       login: "Log In",
       signup: "Join Now",
@@ -78,6 +79,11 @@ const resources = {
       about_us_page_title: "About Us",
       about_us_page_description:
         "Welcome to our blog dedicated to web development! Our mission is to provide high-quality content to help developers, designers, and digital enthusiasts stay informed about the latest trends, technologies, and best practices in the web world. Whether you are a beginner looking to learn the basics or an experienced professional seeking advanced knowledge, our articles, tutorials, and resources are designed to meet your needs. Join our community and explore the exciting world of web development with us!",
+
+      // Blog Page
+      blog_page_title: "Blog",
+      blog_page_description:
+        "Stay up to date with the latest articles and insights on web development!",
 
       // Contact Page
       contact_page_title: "Your opinion matters",

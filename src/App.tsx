@@ -5,12 +5,14 @@ import ContactPage from "./pages/ContactPage/ContactPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import AboutUsPage from "./pages/AboutUsPage/AboutUsPage";
 import RegisterPage from "./pages/RegisterPage/RegisterPage";
+import BlogPage from "./pages/BlogPage/BlogPage";
 
 export default function App() {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/contact" element={<ContactPage />} />
+      <Route path="/blog" element={<BlogPage />} />
       <Route path="/about" element={<AboutUsPage />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/signup" element={<RegisterPage />} />
