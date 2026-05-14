@@ -6,6 +6,7 @@ import LoginPage from "./pages/LoginPage/LoginPage";
 import AboutUsPage from "./pages/AboutUsPage/AboutUsPage";
 import RegisterPage from "./pages/RegisterPage/RegisterPage";
 import BlogPage from "./pages/BlogPage/BlogPage";
+import BlogCreatePage from "./pages/BlogCreatePage/BlogCreatePage";
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
       <Route path="/" element={<HomePage />} />
       <Route path="/contact" element={<ContactPage />} />
       <Route path="/blog" element={<BlogPage />} />
+      <Route path="/blog/new" element={<BlogCreatePage />} />
       <Route path="/about" element={<AboutUsPage />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/signup" element={<RegisterPage />} />

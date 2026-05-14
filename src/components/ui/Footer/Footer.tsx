@@ -84,7 +84,11 @@ export default function Footer() {
           </small>
 
           <div className="footer__social" aria-label="Social links">
-            <a className="footer__socialLink" href="#" aria-label="YouTube">
+            <a
+              className="footer__socialLink"
+              href="https://www.youtube.com"
+              aria-label="YouTube"
+            >
               {/* YouTube */}
               <svg
                 viewBox="0 0 24 24"
@@ -99,7 +103,11 @@ export default function Footer() {
               </svg>
             </a>
 
-            <a className="footer__socialLink" href="#" aria-label="Facebook">
+            <a
+              className="footer__socialLink"
+              href="https://www.facebook.com"
+              aria-label="Facebook"
+            >
               <svg
                 viewBox="0 0 24 24"
                 width="18"
@@ -113,7 +121,11 @@ export default function Footer() {
               </svg>
             </a>
 
-            <a className="footer__socialLink" href="#" aria-label="Twitter / X">
+            <a
+              className="footer__socialLink"
+              href="https://twitter.com"
+              aria-label="Twitter / X"
+            >
               <svg
                 viewBox="0 0 24 24"
                 width="18"
@@ -127,7 +139,11 @@ export default function Footer() {
               </svg>
             </a>
 
-            <a className="footer__socialLink" href="#" aria-label="Instagram">
+            <a
+              className="footer__socialLink"
+              href="https://www.instagram.com"
+              aria-label="Instagram"
+            >
               <svg
                 viewBox="0 0 24 24"
                 width="18"
@@ -141,7 +157,11 @@ export default function Footer() {
               </svg>
             </a>
 
-            <a className="footer__socialLink" href="#" aria-label="LinkedIn">
+            <a
+              className="footer__socialLink"
+              href="https://www.linkedin.com"
+              aria-label="LinkedIn"
+            >
               <svg
                 viewBox="0 0 24 24"
                 width="18"

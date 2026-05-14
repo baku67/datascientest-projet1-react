@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import Footer from "../../components/ui/Footer/Footer";
 import NavBar from "../../components/ui/NavBar/NavBar";
 import "./BlogPage.scss";
+import { Link } from "react-router-dom";
 
 type DummyPost = {
   id: number;
@@ -145,9 +146,19 @@ function BlogPage() {
               </h2>
             </div>
 
-            {!isLoading && !errorMessage && (
-              <span className="blog-articles__count">{totalArticlesLabel}</span>
-            )}
+            <div className="blog-articles__actions">
+              {!isLoading && !errorMessage && (
+                <span className="blog-articles__count">
+                  {totalArticlesLabel}
+                </span>
+              )}
+
+              <Link className="blog-add-button" to="/blog/new">
+                {t("blog_add_article_button", {
+                  defaultValue: "Ajouter un article",
+                })}
+              </Link>
+            </div>
           </div>
 
           {isLoading && (

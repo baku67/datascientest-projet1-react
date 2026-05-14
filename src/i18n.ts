@@ -84,6 +84,28 @@ const resources = {
       blog_page_title: "Blog",
       blog_page_description:
         "Stay up to date with the latest articles and insights on web development!",
+      blog_add_article_button: "Add an article",
+      blog_create_back_button: "← Back to blog",
+      blog_create_eyebrow: "New article",
+      blog_create_title: "Add an article",
+      blog_create_description:
+        "This form is fake for now. It prepares the creation screen before connecting it to the backend.",
+      blog_create_success_title: "Article simulated!",
+      blog_create_success_message:
+        "The form was submitted successfully, but nothing is saved in the database yet.",
+      blog_create_form_title_label: "Title",
+      blog_create_form_title_placeholder: "Ex: React updates to watch",
+      blog_create_form_author_label: "Author",
+      blog_create_form_author_placeholder: "Ex: Marie-Jaqueline",
+      blog_create_form_excerpt_label: "Summary / preview",
+      blog_create_form_excerpt_placeholder:
+        "Write a short introduction that will appear on the preview card.",
+      blog_create_form_content_label: "Content",
+      blog_create_form_content_placeholder: "Write the full article content...",
+      blog_create_form_tags_label: "Tags",
+      blog_create_form_tags_placeholder: "react, frontend, best practices",
+      blog_create_cancel_button: "Cancel",
+      blog_create_submit_button: "Simulate creation",
 
       // Contact Page
       contact_page_title: "Your opinion matters",
@@ -137,6 +159,7 @@ const resources = {
       pagenotfound_go_back: "Retourner à l'accueil",
       // NAV
       about: "À propos",
+      blog: "Blog",
       contact: "Contact",
       login: "Connexion",
       signup: "Créer un compte",
@@ -209,6 +232,35 @@ const resources = {
       about_us_page_title: "À propos",
       about_us_page_description:
         "Bienvenue sur notre blog dédié au développement web ! Notre mission est de fournir du contenu de haute qualité pour aider les développeurs, designers et passionnés du digital à rester informés des dernières tendances, technologies et meilleures pratiques du monde du web. Que vous soyez débutant cherchant à apprendre les bases ou professionnel expérimenté en quête de connaissances avancées, nos articles, tutoriels et ressources sont conçus pour répondre à vos besoins. Rejoignez notre communauté et explorez avec nous l'univers passionnant du développement web !",
+
+      // Blog Page
+      blog_page_title: "Blog",
+      blog_page_description:
+        "Restez à jour avec les derniers articles et conseils sur le développement web !",
+      blog_add_article_button: "Ajouter un article",
+      blog_create_back_button: "← Retour au blog",
+      blog_create_eyebrow: "Nouvel article",
+      blog_create_title: "Ajouter un article",
+      blog_create_description:
+        "Ce formulaire est factice pour le moment. Il permet de préparer l'écran de création avant le branchement au backend.",
+      blog_create_success_title: "Article simulé !",
+      blog_create_success_message:
+        "Le formulaire a bien été validé, mais rien n'est encore enregistré en base.",
+      blog_create_form_title_label: "Titre",
+      blog_create_form_title_placeholder:
+        "Ex: Les nouveautés React à surveiller",
+      blog_create_form_author_label: "Auteur",
+      blog_create_form_author_placeholder: "Ex: Marie-Jaqueline",
+      blog_create_form_excerpt_label: "Résumé / preview",
+      blog_create_form_excerpt_placeholder:
+        "Écris une courte introduction qui apparaîtra sur la card de preview.",
+      blog_create_form_content_label: "Contenu",
+      blog_create_form_content_placeholder:
+        "Rédige le contenu complet de l'article...",
+      blog_create_form_tags_label: "Tags",
+      blog_create_form_tags_placeholder: "react, frontend, bonnes pratiques",
+      blog_create_cancel_button: "Annuler",
+      blog_create_submit_button: "Simuler l'ajout",
 
       // Contact Page
       contact_page_title: "Votre avis compte !",

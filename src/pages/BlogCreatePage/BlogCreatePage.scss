@@ -1,0 +1,200 @@
+.blog-create-page {
+  width: min(920px, 92vw);
+  margin: 20px auto 72px;
+}
+
+.blog-create-page__back-link {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  margin-bottom: 24px;
+  color: #e9d5ff;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    color 160ms ease,
+    transform 160ms ease;
+}
+
+.blog-create-page__back-link:hover {
+  color: #ffffff;
+  transform: translateX(-2px);
+}
+
+.blog-create-page__header {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.blog-create-page__eyebrow {
+  margin: 0 0 10px;
+  color: #c084fc;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.blog-create-page__header h1 {
+  margin: 0;
+  color: #f8fafc;
+  font-size: clamp(34px, 5vw, 56px);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.blog-create-page__header p:not(.blog-create-page__eyebrow) {
+  max-width: 720px;
+  margin: 14px auto 0;
+  color: rgba(226, 232, 240, 0.78);
+  line-height: 1.65;
+}
+
+.blog-create-alert {
+  display: grid;
+  gap: 4px;
+  margin-bottom: 18px;
+  border: 1px solid rgba(74, 222, 128, 0.3);
+  border-radius: 18px;
+  padding: 16px 18px;
+  color: #dcfce7;
+  background: rgba(22, 101, 52, 0.2);
+}
+
+.blog-create-alert span {
+  color: rgba(220, 252, 231, 0.78);
+}
+
+.blog-create-form {
+  display: grid;
+  gap: 18px;
+  margin: 0;
+  border: 1px solid rgba(226, 232, 240, 0.1);
+  border-radius: 24px;
+  padding: clamp(20px, 4vw, 32px);
+  background:
+    radial-gradient(
+      580px 220px at 10% 0%,
+      rgba(147, 51, 234, 0.22),
+      transparent 62%
+    ),
+    rgba(15, 23, 42, 0.78);
+  box-shadow: 0 22px 56px rgba(0, 0, 0, 0.22);
+}
+
+.blog-create-form__row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 0.42fr);
+  gap: 18px;
+}
+
+.blog-create-field {
+  display: grid;
+  gap: 8px;
+}
+
+.blog-create-field span {
+  color: rgba(226, 232, 240, 0.88);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.blog-create-field input,
+.blog-create-field textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid rgba(226, 232, 240, 0.14);
+  border-radius: 16px;
+  padding: 13px 14px;
+  color: #f8fafc;
+  background: rgba(2, 6, 23, 0.38);
+  font: inherit;
+  outline: none;
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease,
+    background-color 160ms ease;
+}
+
+.blog-create-field textarea {
+  resize: vertical;
+}
+
+.blog-create-field input::placeholder,
+.blog-create-field textarea::placeholder {
+  color: rgba(226, 232, 240, 0.42);
+}
+
+.blog-create-field input:focus,
+.blog-create-field textarea:focus {
+  border-color: rgba(192, 132, 252, 0.72);
+  background: rgba(2, 6, 23, 0.58);
+  box-shadow: 0 0 0 4px rgba(147, 51, 234, 0.16);
+}
+
+.blog-create-form__actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.blog-create-form__cancel,
+.blog-create-form__submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  border-radius: 999px;
+  padding: 0 18px;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    border-color 160ms ease,
+    transform 160ms ease,
+    background-color 160ms ease;
+}
+
+.blog-create-form__cancel {
+  border: 1px solid rgba(226, 232, 240, 0.14);
+  color: rgba(226, 232, 240, 0.82);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.blog-create-form__submit {
+  border: 0;
+  color: #ffffff;
+  background: linear-gradient(135deg, #9333ea, #c084fc);
+  box-shadow: 0 14px 28px rgba(147, 51, 234, 0.28);
+}
+
+.blog-create-form__cancel:hover,
+.blog-create-form__submit:hover {
+  transform: translateY(-1px);
+}
+
+.blog-create-form__cancel:hover {
+  border-color: rgba(192, 132, 252, 0.32);
+  background: rgba(255, 255, 255, 0.07);
+}
+
+@media (max-width: 760px) {
+  .blog-create-form__row {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-create-form__actions {
+    justify-content: stretch;
+  }
+
+  .blog-create-form__cancel,
+  .blog-create-form__submit {
+    flex: 1 1 100%;
+  }
+}
